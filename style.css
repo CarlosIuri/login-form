@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300;400;700&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Averia Sans Libre', cursive;
+  background-color: #233142;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.login-box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box h1 {
+  margin: 0 0 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.form-box {
+  position: relative;
+  background-color: #455d7a;
+  width: 600px;
+  padding: 40px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.user-box {
+  position: relative;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.user-box input:focus {
+  border-bottom-color: #233142;
+}
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  color: #e3e3e3;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  font-size: 1.25rem;
+  top: -30px;
+  left: 0;
+  color: #233142;
+  font-weight: bold;
+}
+
+.form-box .button-box a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #f95959;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: all 0.5s;
+  letter-spacing: 4px;
+  outline: none;
+}
+
+.form-box .button-box a:hover,
+.form-box .button-box a:focus {
+  background-color: #233142ff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #233142, 0 0 25px #233142, 0 0 50px #233142,
+    0 0 100px #233142;
+}
+
+.button-box {
+  display: flex;
+  justify-content: end;
+}
+
+.button-box a span {
+  position: absolute;
+  display: block;
+}
+
+.button-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #233142ff);
+  animation: anim1 1s linear infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.button-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #233142ff);
+  animation: anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.button-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #233142ff);
+  animation: anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.button-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(270deg, transparent, #233142ff);
+  animation: anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
